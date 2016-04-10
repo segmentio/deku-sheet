@@ -1,0 +1,64 @@
+
+/**
+ * No scroll.
+ */
+
+.NoScroll {
+  overflow: hidden;
+}
+
+/**
+ * Overlay.
+ */
+
+.InfoSheetOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.6);
+  transform: translate3d(0,0,0);
+  will-change: opacity;
+}
+
+/**
+ * Sheet.
+ */
+
+.InfoSheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 800px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  animation: Slide .25s cubic-bezier(0.305, 0.555, 0.405, 1.025)
+}
+
+/**
+ * Close button.
+ */
+
+.InfoSheetOverlay-close {
+  position: fixed;
+  cursor: pointer;
+  margin: 15px;
+}
+
+/**
+ * Slide animation.
+ */
+
+@keyframes Slide {
+ from {
+    transform: translateX(100%);
+ }
+ to {
+    transform: translateX(0);
+ }
+}
