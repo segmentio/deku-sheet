@@ -3,12 +3,16 @@
 
 A sheet component for Deku.
 
+![Demo](https://cldup.com/cWxKH3hr9Y.png)
+
 ## Usage
 
 ```js
 import Sheet from 'deku-sheet';
 
-export function render({ state }, setState) {
+export default render;
+
+function render({ state }, setState) {
   const { sheetVisible } = state;
 
   if (sheetVisible) {
