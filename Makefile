@@ -1,16 +1,24 @@
 
+BIN := ./node_modules/.bin
+
 lib: node_modules
-	@./node_modules/.bin/babel --out-dir $@ src --source-maps inline
-	@cp src/index.css lib/index.css
+	$(BIN)/babel --out-dir $@ src --source-maps inline
+	cp src/index.css lib/index.css
+
+test: node_modules
+	$(BIN)/mochify \
+		--transform babelify \
+		--phantomjs $(BIN)/phantomjs \
+		--reporter spec
 
 node_modules: package.json
-	@npm install
+	npm install
 	touch $@
 
 clean:
-	@rm -rf lib
+	rm -rf lib
 
 distclean: clean
-	@rm -rf node_modules
+	rm -rf node_modules
 
 .PHONY: clean distclean
