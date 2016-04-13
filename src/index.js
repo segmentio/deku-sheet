@@ -4,7 +4,7 @@
  */
 
 import element from 'virtual-element';
-import { Icon } from '@segment/icons';
+import Icon from '@segment/icons';
 
 /**
  * Exports.
