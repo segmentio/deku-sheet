@@ -3,7 +3,7 @@ BIN := ./node_modules/.bin
 
 lib: node_modules
 	$(BIN)/babel --out-dir $@ src --source-maps inline
-	cp src/index.css lib/index.css
+	postcss --use autoprefixer --dir $@ src/index.css
 
 test: node_modules
 	$(BIN)/mochify \
