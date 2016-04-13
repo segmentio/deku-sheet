@@ -10,8 +10,6 @@ A sheet component for Deku.
 ```js
 import Sheet from 'deku-sheet';
 
-export default render;
-
 function render({ state }, setState) {
   const { showSheet } = state;
   if (showSheet) return <Sheet onClose={hideSheet} />;
