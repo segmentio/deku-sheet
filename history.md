@@ -1,4 +1,10 @@
 
+1.0.1 / 2016-04-13
+==================
+
+  * circle: build lib in `test` phase
+  * Makefile: fix `postcss` ref
+
 1.0.0 / 2016-04-13
 ==================
 
