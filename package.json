@@ -1,6 +1,6 @@
 {
   "name": "@segment/deku-sheet",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A sheet component for Deku.",
   "main": "lib/index.js",
   "style": "lib/index.css",
