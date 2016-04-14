@@ -4,7 +4,7 @@
  */
 
 import element from 'virtual-element';
-import { Icon } from '@segment/icons';
+import Icon from '@segment/icons';
 
 /**
  * Exports.
@@ -38,14 +38,12 @@ function beforeUnmount() {
 
 function render({ props }) {
   const { onClose, children } = props;
-
   return (
-    <div class="InfoSheetOverlay" onClick={onClose}>
-      <div class="InfoSheetOverlay-close">
+    <div class="SheetOverlay" onClick={onClose}>
+      <div class="SheetOverlay-close">
         <Icon type="close" size="52px" />
       </div>
-
-      <div class="InfoSheet" onClick={returnFalse}>
+      <div class="Sheet" onClick={returnFalse}>
         {children}
       </div>
     </div>
