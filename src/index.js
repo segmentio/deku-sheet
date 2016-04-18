@@ -43,7 +43,7 @@ function render({ props }) {
       <div class="SheetOverlay-close">
         <Icon type="close" size="52px" />
       </div>
-      <div class="Sheet" onClick={returnFalse} wide={wide}>
+      <div class="Sheet" onClick={returnFalse} data-wide={wide}>
         {children}
       </div>
     </div>

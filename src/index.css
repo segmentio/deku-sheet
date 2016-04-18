@@ -46,7 +46,7 @@
   animation: Slide .25s cubic-bezier(0.305, 0.555, 0.405, 1.025)
 }
 
-.Sheet[wide] {
+.Sheet[data-wide] {
   width: 800px;
 }
 
