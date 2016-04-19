@@ -51,7 +51,9 @@ function render({ props }) {
   );
 
   function handleKeydown(e) {
-    if (keyname(e.which) === 'esc') onClose();
+    if (keyname(e.which) === 'esc') {
+      if (onClose) onClose();
+    }
   }
 }
 
