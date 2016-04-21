@@ -1,4 +1,10 @@
 
+1.0.6 / 2016-04-20
+==================
+
+  * trigger onClose when escape is pressed
+  * feat(site): basic example
+
 1.0.5 / 2016-04-18
 ==================
 
