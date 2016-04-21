@@ -5,6 +5,7 @@
 
 import element from 'virtual-element';
 import Icon from '@segment/icons';
+import keyname from 'keyname';
 
 /**
  * Exports.
@@ -39,7 +40,7 @@ function beforeUnmount() {
 function render({ props }) {
   const { wide, onClose, children } = props;
   return (
-    <div class="SheetOverlay" onClick={onClose}>
+    <div class="SheetOverlay" onClick={onClose} onKeyDown={handleKeydown}>
       <div class="SheetOverlay-close">
         <Icon type="close" size="52px" />
       </div>
@@ -48,6 +49,12 @@ function render({ props }) {
       </div>
     </div>
   );
+
+  function handleKeydown(e) {
+    if (keyname(e.which) === 'esc') {
+      if (onClose) onClose();
+    }
+  }
 }
 
 /**
