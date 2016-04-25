@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-import element from 'virtual-element';
+import element from 'magic-virtual-element';
 import Icon from '@segment/icons';
 import keyname from 'keyname';
 
@@ -38,9 +38,9 @@ function beforeUnmount() {
  */
 
 function render({ props }) {
-  const { wide, onClose, children } = props;
+  const { wide, onClose, style, children } = props;
   return (
-    <div class="SheetOverlay" onClick={onClose} onKeyDown={handleKeydown}>
+    <div class="SheetOverlay" onClick={onClose} onKeyDown={handleKeydown} style={style}>
       <div class="SheetOverlay-close">
         <Icon type="close" size="52px" />
       </div>
