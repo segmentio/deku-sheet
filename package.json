@@ -7,7 +7,7 @@
   "dependencies": {
     "@segment/icons": "^3.0.1",
     "keyname": "^0.1.0",
-    "magic-virtual-element": "^2.0.0-rc1"
+    "magic-virtual-element": "^1.0.6"
   },
   "devDependencies": {
     "assert-element": "^0.3.1",
