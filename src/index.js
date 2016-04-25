@@ -40,11 +40,11 @@ function beforeUnmount() {
 function render({ props }) {
   const { wide, onClose, style, children } = props;
   return (
-    <div class="SheetOverlay" onClick={onClose} onKeyDown={handleKeydown} style={style}>
+    <div class="SheetOverlay" onClick={onClose} onKeyDown={handleKeydown}>
       <div class="SheetOverlay-close">
         <Icon type="close" size="52px" />
       </div>
-      <div class="Sheet" onClick={returnFalse} data-wide={wide}>
+      <div class="Sheet" onClick={returnFalse} data-wide={wide} style={style}>
         {children}
       </div>
     </div>
